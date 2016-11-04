@@ -186,7 +186,7 @@ function performSearch() {
   $.ajax({
     type: "GET",
     crossDomain: true,
-    url: 'api.php',
+    url: '/api/api.php',
     data: {
       query: query,
       entity: entity,
