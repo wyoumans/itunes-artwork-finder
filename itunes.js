@@ -226,20 +226,20 @@ function performSearch() {
 $(document).ready(function() {
 
 
-  var sortable = [];
-  for (var key in countries) {
-    sortable.push([key, countries[key]]);
-  }
-  sortable.sort(function(a, b) {
-    if (a[1] < b[1]) return 1;
-    if (a[1] > b[1]) return -1;
-    return 0;
-  });
+  // var sortable = [];
+  // for (var key in countries) {
+  //   sortable.push([key, countries[key]]);
+  // }
+  // sortable.sort(function(a, b) {
+  //   if (a[1] < b[1]) return 1;
+  //   if (a[1] > b[1]) return -1;
+  //   return 0;
+  // });
 
-  for (var i = sortable.length - 1; i >= 0; i--) {
-    var array = sortable[i];
-    $('#country').append('<option value="' + array[0] + '">' + array[1] + '</option>');
-  };
+  // for (var i = sortable.length - 1; i >= 0; i--) {
+  //   var array = sortable[i];
+  //   $('#country').append('<option value="' + array[0] + '">' + array[1] + '</option>');
+  // };
 
   var params = getSearchParameters();
   if (params.entity && params.query && params.country) {
