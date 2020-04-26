@@ -1,14 +1,14 @@
 body {
-  background-color: #F6F6F6;
-  font-family: 'Roboto', sans-serif;
+  background-color: #f6f6f6;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
   margin-top: 50px;
   padding: 30px;
   min-height: 500px;
-  background-color: #FFFFFF;
-  border: 1px solid #CCC;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
 }
 
 h1 {
