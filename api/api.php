@@ -52,49 +52,48 @@ if ($search) {
         $data['title'] = ($entity == 'movie') ? $result->trackName : $result->collectionName;
 
         switch ($entity) {
-      case 'musicVideo':
-        $data['title'] = $result->trackName . ' (by ' . $result->artistName . ')';
-        $data['url'] = $hires;
-        $width = 640;
-        $height = 464;
-        break;
-      case 'tvSeason':
-        $data['title'] = $result->collectionName;
-        break;
-      case 'movie':
-      case 'id':
-      case 'shortFilm':
-        $data['title'] = $result->trackName;
-        $width = 400;
-        $warning = '(may not work)';
-        break;
-      case 'ebook':
-        $data['title'] = $result->trackName . ' (by ' . $result->artistName . ')';
-        $width = 400;
-        $warning = '(probably won\'t work)';
-        break;
-      case 'album':
-      case 'idAlbum':
-        $data['title'] = $result->collectionName . ' (by ' . $result->artistName . ')';
-        //$warning = '(probably won\'t work)';
-        break;
-      case 'audiobook':
-        $data['title'] = $result->collectionName . ' (by ' . $result->artistName . ')';
-        $warning = '(probably won\'t work)';
-        break;
-      case 'podcast':
-        $data['title'] = $result->collectionName . ' (by ' . $result->artistName . ')';
-        break;
-      case 'software':
-        $data['url'] = str_replace('512x512bb', '1024x1024bb', $result->artworkUrl512);
-        $data['appstore'] = $result->trackViewUrl;
-        $data['title'] = $result->trackName;
-        $width = 512;
-        $height = 512;
-        break;
-      default:
-        break;
-    }
+            case 'musicVideo':
+                $data['title'] = $result->trackName . ' (by ' . $result->artistName . ')';
+                $data['url'] = $hires;
+                $width = 640;
+                $height = 464;
+                break;
+            case 'tvSeason':
+                $data['title'] = $result->collectionName;
+                break;
+            case 'movie':
+            case 'id':
+            case 'shortFilm':
+                $data['title'] = $result->trackName;
+                $width = 400;
+                $warning = '(may not work)';
+                break;
+            case 'ebook':
+                $data['title'] = $result->trackName . ' (by ' . $result->artistName . ')';
+                $width = 400;
+                $warning = '(probably won\'t work)';
+                break;
+            case 'album':
+            case 'idAlbum':
+                $data['title'] = $result->collectionName . ' (by ' . $result->artistName . ')';
+                break;
+            case 'audiobook':
+                $data['title'] = $result->collectionName . ' (by ' . $result->artistName . ')';
+                $warning = '(probably won\'t work)';
+                break;
+            case 'podcast':
+                $data['title'] = $result->collectionName . ' (by ' . $result->artistName . ')';
+                break;
+            case 'software':
+                $data['url'] = str_replace('512x512bb', '1024x1024bb', $result->artworkUrl512);
+                $data['appstore'] = $result->trackViewUrl;
+                $data['title'] = $result->trackName;
+                $width = 512;
+                $height = 512;
+                break;
+            default:
+               break;
+        }
 
         if ($data['title']) {
             $data['width'] = $width;
